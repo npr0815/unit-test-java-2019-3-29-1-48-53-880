@@ -4,8 +4,7 @@ import org.junit.Test;
 import tw.core.Answer;
 
 import static junit.framework.TestCase.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 /**
  * 在AnswerGeneratorTest文件中完成AnswerGenerator中对应的单元测试
@@ -17,6 +16,7 @@ public class AnswerGeneratorTest {
         when(randomIntGenerator.generateNums(9,4)).thenReturn("4 3 2 5");
         AnswerGenerator answerGenerator = new AnswerGenerator(randomIntGenerator);
         assertTrue(answerGenerator.generate() instanceof Answer);
+        verify(randomIntGenerator).generateNums(9,4);
     }
 }
 
