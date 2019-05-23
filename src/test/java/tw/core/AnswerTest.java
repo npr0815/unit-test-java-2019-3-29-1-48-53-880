@@ -1,6 +1,5 @@
 package tw.core;
 
-import org.junit.Before;
 import org.junit.Test;
 import tw.core.exception.OutOfRangeAnswerException;
 
@@ -16,10 +15,6 @@ import static org.mockito.Mockito.mock;
  */
 public class AnswerTest {
 
-    @Before
-    public void setUp() throws Exception {
-
-    }
 
     @Test
     public void should_execute_createAnswer_method()throws Exception{
