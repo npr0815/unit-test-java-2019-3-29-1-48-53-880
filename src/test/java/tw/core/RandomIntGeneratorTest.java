@@ -4,7 +4,9 @@ package tw.core;
 import org.junit.Test;
 import tw.core.generator.RandomIntGenerator;
 
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.mock;
 
 /**
  * 在RandomIntGeneratorTest文件中完成RandomIntGenerator中对应的单元测试
@@ -19,8 +21,7 @@ public class RandomIntGeneratorTest {
 
     @Test
     public void should_execute_generateNums_normal() {
-        RandomIntGenerator randomIntGenerator = mock(RandomIntGenerator.class);
-        randomIntGenerator.generateNums(2,1);
-        verify(randomIntGenerator).generateNums(2,1);
+        RandomIntGenerator randomIntGenerator = new RandomIntGenerator();
+        assertEquals(randomIntGenerator.generateNums(2,1),"1");
     }
 }
