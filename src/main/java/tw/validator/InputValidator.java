@@ -10,7 +10,7 @@ import static java.lang.Integer.parseInt;
  * Created by jxzhong on 2017/5/18.
  */
 public class InputValidator {
-        public Boolean validate(String numStr) {
+    public Boolean validate(String numStr) {
         List<String> numList = numStrToList(numStr);
         int NumCount = 4;
         Boolean isValidate = validateDigitsCount(numList, NumCount);
